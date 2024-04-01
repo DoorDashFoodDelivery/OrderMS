@@ -9,10 +9,10 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class OrderDTO {
+public class OrderDTOFromFE {
 
-	private Integer orderId;
 	private List<FoodItemDTO> foodItemList;
+	private Integer userId;
 	private RestaurantDTO restaurantDTO;
-	private UserDTO userDTO;
+	
 }
