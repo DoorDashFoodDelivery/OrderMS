@@ -28,7 +28,7 @@ public class OrderService {
 	
 	UserDTO userDTO=fetchUserDetailsFromUserId(orderDetails.getUserId());
 	
-		Order orderToBeSaved=new  Order(newOrderId, orderDetails.getFoodItemList(), orderDetails.getRestaurantDTO(), userDTO);
+		Order orderToBeSaved=new  Order(newOrderId, orderDetails.getFoodItemList(), orderDetails.getRestaurant(), userDTO);
 		orderRepo.save(orderToBeSaved);
 		return OrderMapper.INSTANCE.mapOrderToOrderDTO(orderToBeSaved);
 	}

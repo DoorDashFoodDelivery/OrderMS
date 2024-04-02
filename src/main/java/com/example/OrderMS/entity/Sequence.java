@@ -14,6 +14,6 @@ import lombok.NoArgsConstructor;
 public class Sequence {
 	
 	@Id
-	private int id;
+	private String id;
 	private int sequence;
 }

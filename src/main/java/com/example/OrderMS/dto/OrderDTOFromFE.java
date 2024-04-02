@@ -13,6 +13,6 @@ public class OrderDTOFromFE {
 
 	private List<FoodItemDTO> foodItemList;
 	private Integer userId;
-	private RestaurantDTO restaurantDTO;
+	private Restaurant restaurant;
 	
 }

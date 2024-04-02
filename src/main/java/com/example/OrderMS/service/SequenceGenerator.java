@@ -17,13 +17,12 @@ public class SequenceGenerator {
 	
 	public int generateNextOrderId() {
 		
-		Sequence counter = mongoOperations.findAndModify(
-		        Query.query(Criteria.where("_id").is("sequence")),
-		        new Update().inc("sequence", 1),
-		        FindAndModifyOptions.options().returnNew(true).upsert(true),
-		        Sequence.class);
-		
-		return counter.getSequence();
+		 Sequence counter = mongoOperations.findAndModify(
+	                Query.query(Criteria.where("_id").is("sequence")),
+	                new Update().inc("sequence", 1),
+	                FindAndModifyOptions.options().returnNew(true).upsert(true),
+	                Sequence.class);
+	        return counter.getSequence();
 		
 	}
 }
